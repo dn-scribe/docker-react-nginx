@@ -23,11 +23,11 @@ jobs:
           mv  /home/runner/.scribe/bin/valint /usr/local/bin/valint
           valint --version
 
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      # - name: Login to DockerHub
+      #   uses: docker/login-action@v1
+      #   with:
+      #     username: ${{ secrets.DOCKERHUB_USERNAME }}
+      #     password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Pull fst-docker-processing image
         run: docker pull scribesecurity/fstsboms:latest  

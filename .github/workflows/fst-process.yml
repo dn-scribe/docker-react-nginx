@@ -108,7 +108,7 @@ jobs:
         env:
           STEP_NAME: Compress build artifacts
         run: |
-          tar -cJf dist.tar.xz dist
+          tar -cJf dist.tar.xz build
 
       - name: Stop fs-tracker
         id: stop-fs-tracker
